@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DepositWindow</class>
+ <widget class="QMainWindow" name="DepositWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>704</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Калькулятор доходности вкладов</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+	border: 0px;
+	background-color: transparent;
+	color: white;
+	font-size: 14px;
+}
+
+QComboBox {
+	border: 1px solid #333333;
+	border-radius: 8px;
+	padding-left: 10px;
+	background-color: #858585;
+	padding: 4px;
+	color: white;
+}
+
+QComboBox:on {
+	border: 1px solid #7700ff;
+}
+
+QComboBox::drop-down {
+	border: 0px;
+}
+
+QComboBox QListView {
+	background-color: #858585;
+	color: white;
+	border-radius: 8px;
+	padding: 4px;
+}
+
+QCheckBox {
+	color: white;
+}
+
+QWidget#centralwidget {
+        background-color: &quot;#363636&quot;;
+}
+
+QCustomPlot {
+	border-radius: 8px;
+}
+
+QPushButton {
+        border-radius: 8px;
+        color: white;
+        background-color: grey;
+        font-size: 14px;
+		padding: 5px;
+        font-weight: bold;
+}
+
+QPushButton:hover:!pressed {
+        border: 4px solid white;
+}
+
+QLabel {
+	color: white;
+}
+
+QLineEdit {
+        border: 1px solid white;
+        border-radius: 8px;
+        background-color: transparent;
+        font-size: 16px;
+		padding: 2px;
+        color: white;
+        font-weight: bold;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Сумма вклада</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="sumEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Срок размещения (Мес.)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="placementEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Процентная ставка (Мес.)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="percentEdit"/>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Периодичность выплат</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="periodCB"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="capitalPercentCB">
+        <property name="text">
+         <string>Капитализация процентов</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Пополнения</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addAddsBtn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: &quot;#4287f5&quot; }
+
+QPushButton:pressed { background-color: &quot;#aa4287f5&quot; }</string>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="5" column="1">
+       <widget class="QListWidget" name="addsList">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Част. снятия</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addRemsBtn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton { background-color: &quot;#4287f5&quot; }
+
+QPushButton:pressed { background-color: &quot;#aa4287f5&quot; }</string>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="1">
+       <widget class="QListWidget" name="remsList">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QPushButton" name="removeSelectedBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: &quot;#f54242&quot;; }
+
+QPushButton:pressed { background-color: &quot;#aaf54242&quot; }</string>
+        </property>
+        <property name="text">
+         <string>Удалить выбранное</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Результат:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Начисленные проценты:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Сумма налога:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>Сумма на вкладе к концу срока:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="percentsLabel">
+        <property name="text">
+         <string>0₽</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="taxLabel">
+        <property name="text">
+         <string>0₽</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="totalSumLabel">
+        <property name="text">
+         <string>0₽</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="calcBtn">
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: &quot;#a2a2d0&quot; }
+
+QPushButton:pressed { background-color: &quot;#aaa2a2d0&quot; }</string>
+      </property>
+      <property name="text">
+       <string>Расчитать</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

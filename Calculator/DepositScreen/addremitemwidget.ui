@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddRemItemWidget</class>
+ <widget class="QWidget" name="AddRemItemWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>447</width>
+    <height>94</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#AddRemItemWidget {
+        background-color: &quot;#363636&quot;;
+}
+
+QCustomPlot {
+	border-radius: 8px;
+}
+
+QPushButton {
+        border-radius: 8px;
+        color: white;
+        background-color: grey;
+        font-size: 14px;
+		padding: 5px;
+        font-weight: bold;
+}
+
+QPushButton:hover:!pressed {
+        border: 4px solid white;
+}
+
+QLabel {
+	color: white;
+}
+
+QLineEdit {
+        border: 1px solid white;
+        border-radius: 8px;
+        background-color: transparent;
+        font-size: 16px;
+		padding: 2px;
+        color: white;
+        font-weight: bold;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Через</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="monthEdit"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>месяцев. Сумма:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="sumEdit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton { background-color: &quot;#a2a2d0&quot; }
+
+QPushButton:pressed { background-color: &quot;#aaa2a2d0&quot; }</string>
+       </property>
+       <property name="text">
+        <string>Добавить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
